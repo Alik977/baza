@@ -1,0 +1,12 @@
+nav a {
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+.bodynav{
+    background-image: url(.//..//../assets/image/back.jpg);
+    background-size: cover;
+  
+}
