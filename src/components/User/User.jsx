@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./User.css";
+import picture from "..//..//assets/image/pngwing.com.png";
 function User() {
   const [users, setUsers] = useState([]);
 
@@ -12,6 +13,10 @@ function User() {
 
   return (
     <section>
+      
+      <div class="animacionreal">
+        <img src={picture} alt="" />
+      </div>
       <h2>Users</h2>
       {users.map((user) => (
         <div key={user.id} className="post-card">

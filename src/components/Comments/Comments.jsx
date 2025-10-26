@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Comments.css";
+import picture from "..//..//assets/image/pngwing.com.png";
 function Comments() {
   const [comments, setComments] = useState([]);
 
@@ -12,6 +13,10 @@ function Comments() {
 
   return (
     <div className="bodycom">
+  
+      <div class="animacionreal">
+        <img src={picture} alt="" />
+      </div>
       {" "}
       <section>
         <h2>Comments</h2>

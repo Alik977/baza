@@ -1,12 +1,51 @@
-nav a {
-  transition: 0.3s;
-}
 
-nav a:hover {
-  color: #ffeb3b;
-}
 .bodynav{
     background-image: url(.//..//../assets/image/back.jpg);
     background-size: cover;
   
+}
+
+
+.animacionreal img {
+  width: 100px;
+}
+.animacionreal {
+  position: absolute;
+  top: 800px;
+  animation-name: realmadrid;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes realmadrid {
+  0% {
+    top: 80%;
+    left: 0;
+  }
+  25% {
+    left: 150px;
+    top: 0px;
+  }
+  50% {
+    top: 20%;
+    left: calc(100% - 100px);
+  }
+  75% {
+    top: calc(100% - 200px);
+    bottom: 0;
+    right: 100px;
+  }
+  80%
+  {
+    top: 800px;
+    left: 140px;
+    bottom: 40px;
+  }
+  100% {
+    top: 200px;
+    left: 0;
+  }
 }

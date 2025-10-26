@@ -66,3 +66,14 @@ li {
   color: red;
   font-weight: bold;
 }
+
+.comment-card:hover{
+  transition: all 2s;
+  transform: scale(1.1);
+    cursor: pointer;
+}
+.post-card:hover{
+   transition: all 2s;
+  transform: scale(1.1);
+  cursor: pointer;
+}

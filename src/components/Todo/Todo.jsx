@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import picture from "..//..//assets/image/pngwing.com.png"
 import "./Todo.css"
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -12,11 +13,18 @@ function Todo() {
 
   return (
     <div className="bodytodo">
-    <section>
+    <section >
+      <div class="animacionreal">
+      <img
+        src={picture}
+        alt=""
+      />
+   
+    </div>
       <h2>Todos</h2>
-      <ul>
+      <ul >
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <li key={todo.id} >
             {todo.title} –{" "}
             <span className={todo.completed ? "completed" : "pending"}>
               {todo.completed ? "Done" : "Pending"}

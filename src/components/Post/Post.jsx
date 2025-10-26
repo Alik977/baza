@@ -1,7 +1,11 @@
-import { useEffect, useState } from "react";
-import "./Post.css"
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import picture from "../../assets/image/pngwing.com.png";
+import "./Post.css";
+
 function Post() {
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -10,17 +14,30 @@ function Post() {
       .catch((err) => console.error("Posts fetch error:", err));
   }, []);
 
+  const handleClick = (id) => {
+    navigate(`/posts/${id}`); 
+  };
+
   return (
-    <div className="bodypost"><section >
-      <h2>Posts</h2>
-      {posts.map((post) => (
-        <div key={post.id} className="post-card">
-          <h3>{post.title}</h3>
-          <p>{post.body}</p>
-        </div>
-      ))}
-    </section></div>
-    
+    <div className="bodypost">
+      <div className="animacionreal">
+        <img src={picture} alt="" />
+      </div>
+
+      <section>
+        <h2>Posts</h2>
+        {posts.map((post) => (
+          <div
+            key={post.id}
+            className="post-card"
+            onClick={() => handleClick(post.id)}
+          >
+            <h3>{post?.title}</h3>
+            <p>{post?.body.slice(0, 60)}...</p>
+          </div>
+        ))}
+      </section>
+    </div>
   );
 }
 
